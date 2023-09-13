@@ -5,6 +5,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 import seaborn as sns
+import nltk
 from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
 from nltk.tokenize import word_tokenize
@@ -62,7 +63,7 @@ def check_data(data):
 
 def text_preprocessing(data):
     # Download NLTK resources (if needed)
-    #nltk.download('all')
+    nltk.download('all')
     # Extract the 'text' column from the given data in a list
     text = list(data['text'])
     # Initialize the WordNetLemmatizer for lemmatization
